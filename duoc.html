@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Configuración estricta para móviles: permite zoom pero inicia a escala perfecta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Ubicación - UDLA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef; /* Fondo gris claro para contrastar con el mapa */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .header {
+            width: 100%;
+            background-color: #722f37; /* Tono burdeo para el encabezado */
+            color: white;
+            text-align: center;
+            padding: 18px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            position: sticky; /* Mantiene el encabezado fijo arriba */
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 600px; /* Evita que el mapa se deforme en pantallas grandes */
+            padding: 15px;
+            box-sizing: border-box;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px; /* Bordes redondeados modernos */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+            display: block;
+        }
+
+        .instructions {
+            padding: 20px;
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            background-color: white;
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid #d1d1d1;
+            margin-top: auto; /* Empuja las instrucciones al fondo si la pantalla es muy alta */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>📍 ESTÁS EN: DUOC UC</h1>
+    </div>
+
+    <div class="map-container">
+        <!-- Asegúrate de que la imagen de la UDLA con el pin esté guardada en la carpeta img -->
+        <img src="img/mapa-duoc.png" alt="Plano de ubicación DUOC UC" class="map-image">
+    </div>
+
+    <div class="instructions">
+        <p>Puedes acercar el mapa haciendo zoom con tus dedos en la pantalla.</p>
+    </div>
+
+</body>
+</html>
